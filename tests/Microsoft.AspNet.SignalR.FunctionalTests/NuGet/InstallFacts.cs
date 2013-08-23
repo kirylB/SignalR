@@ -197,5 +197,15 @@ namespace Microsoft.AspNet.SignalR.FunctionalTests.NuGet
         {
             this.Run("Microsoft.AspNet.SignalR.Utils", name);
         }
+
+        [Theory]
+        [InlineData("aspnetwebstacknightly")]
+        [InlineData("aspnetwebstacknightlyrelease")]
+        [InlineData("Staging")]
+        //[InlineData("Production")]
+        public void OwinCors(string name)
+        {
+            this.Run("Microsoft.Owin.Cors", name);
+        }
     }
 }
